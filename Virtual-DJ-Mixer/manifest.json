@@ -1,0 +1,14 @@
+{
+  "name": "1989SHACK-GAIH Virtual DJ Mixer - Global",
+  "short_name": "DJ Mixer Global",
+  "description": "Virtual DJ Mixer for Local and International DJs across globe - 2 Decks + Crossfader + EQ + Effects + Real Audio - By 1989SHACK-GAIH Liberia",
+  "start_url": "/live/Virtual-DJ-Mixer/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#FFD700",
+  "orientation": "any",
+  "icons": [
+    {"src": "icon-192.png","sizes":"192x192","type":"image/png"},
+    {"src": "icon-512.png","sizes":"512x512","type":"image/png"}
+  ]
+}
