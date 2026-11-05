@@ -1,65 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Life International School — For Liberia — For Africa — For World</title>
-<style>
-*{box-sizing:border-box;margin:0;padding:0}
-body{background:#000;color:#fff;font-family:Arial,sans-serif;padding:12px}
-.wrap{max-width:900px;margin:0 auto}
-.card{border:2px solid #00c6ff;border-radius:16px;padding:18px;margin:12px 0;background:#0a0a0a}
-h1{font-size:26px;text-align:center;line-height:1.3}
-h2{font-size:20px;margin-bottom:10px}
-p,li{font-size:16px;line-height:1.6}
-.blue{background:#00c6ff;color:#000;border:0;width:100%;padding:14px;border-radius:12px;font-weight:bold;font-size:17px;cursor:pointer}
-input,select{width:100%;padding:13px;margin:8px 0;border-radius:12px;border:0;font-size:16px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.box{border:2px solid #ff4d8d;border-radius:14px;padding:14px}
-.box2{border:2px solid #ff6a00;border-radius:14px;padding:14px}
-@media(max-width:600px){.grid{grid-template-columns:1fr}h1{font-size:22px}}
-.small{text-align:center;opacity:.85;margin-top:10px}
-</style>
-</head>
-<body>
-<div class="wrap">
-<div class="card">
-<h1>Life International School<br>For Liberia — For Africa — For World<br>For Education — For Future</h1>
-<p class="small">Professional Programmers — We Have Power — Complete Authority — For Education</p>
-</div>
-
-<div class="card">
-<h2>Interact — All Platforms</h2>
-<select id="role"><option>Select Role</option><option>Administrator</option><option>Teacher</option><option>Student</option><option>Parent</option></select>
-<input id="email" type="email" placeholder="Email — For Life International School">
-<input id="pass" type="password" placeholder="Password — AES-256 Encrypted">
-<button class="blue" onclick="login()">🛡️ Secure Login — 6 Layers — For Education</button>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Life International School — Portal</title>
+<style>*{box-sizing:border-box}body{background:#000;color:#fff;font-family:Arial;padding:12px;margin:0}.wrap{max-width:900px;margin:auto}.card{border:2px solid #00c6ff;border-radius:16px;padding:18px;margin:12px 0;background:#0a0a0a}h1{font-size:24px;text-align:center}h2{font-size:19px}input,select{width:100%;padding:13px;margin:8px 0;border-radius:12px;border:0;font-size:16px}.blue{background:#00c6ff;color:#000;border:0;width:100%;padding:14px;border-radius:12px;font-weight:bold;font-size:17px;cursor:pointer}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.box{border:2px solid #ff4d8d;border-radius:14px;padding:14px}.box2{border:2px solid #ff6a00;border-radius:14px;padding:14px}@media(max-width:600px){.grid{grid-template-columns:1fr}}.small{text-align:center;opacity:.85}.red{background:#ff3b3b;color:#fff;border:0;padding:10px 16px;border-radius:10px;cursor:pointer}table{width:100%;border-collapse:collapse;margin-top:10px}td,th{border:1px solid #333;padding:8px;font-size:14px;text-align:left}</style></head>
+<body><div class="wrap">
+<div id="loginBox">
+<div class="card"><h1>Life International School<br>For Liberia — For Africa — For World<br>For Education — For Future</h1><p class="small">Use ONE email, no spaces — Example: admin@life-school.lr</p></div>
+<div class="card"><h2>Interact — All Platforms — Login / Create Account</h2>
+<select id="role"><option>Administrator</option><option>Teacher</option><option>Student</option><option>Parent</option></select>
+<input id="email" type="email" placeholder="Email — No spaces — Example: admin@life-school.lr">
+<input id="pass" type="password" placeholder="Password — Keep it private">
+<button class="blue" onclick="doLogin()">🛡️ Secure Login — For Education</button>
+<button class="blue" style="background:#ffcc00;margin-top:8px" onclick="doCreate()">✨ Create My Account First Time</button>
 <p id="msg" class="small"></p>
-<p class="small">For Global Users — For Education — For $1 Data — Low Data — For Duala — For Liberia — For Africa — For World</p>
-</div>
+<p class="small">Step 1: Create Account once. Step 2: Login every time with same email + password.</p></div></div>
 
-<div class="grid">
-<div class="box"><h2>📊 Test Evaluation — Official — For Report Card — For Future</h2><p>1st Period, 2nd Period, Final Exam — Term 1st / 2nd / 3rd — Academic Year 2026/2027 — Max Score 100 — Grade Letter A / B+ / B / C — Remarks — Parent Viewed — Parent SMS Sent — For Grades — For $1 Data — Low Data</p></div>
-<div class="box2"><h2>📣 Other Announcements — Attendance — Teacher Comments</h2><p>Announcements — Administration — Students, Parents — Priority Low / Medium / High — For School — For Family</p><p><b>Fees:</b> L$ and CBL L$ — No Fake Rates — Economy — For Liberia</p></div>
+<div id="dashBox" style="display:none">
+<div class="card"><h1>Welcome <span id="who"></span> 👋<br>Life School Portal — Dashboard</h1><p class="small" id="who2"></p><button class="red" onclick="logout()">Logout</button></div>
+<div class="grid"><div class="box"><h2>📊 Test Evaluation — Official</h2><p>1st Period, 2nd Period, Final Exam — Term 1st / 2nd / 3rd — 2026/2027 — Max 100 — Grade A / B+ / B / C</p><table><tr><th>Subject</th><th>Score</th><th>Grade</th></tr><tr><td>Math</td><td>88</td><td>A</td></tr><tr><td>English</td><td>82</td><td>B+</td></tr><tr><td>Science</td><td>90</td><td>A</td></tr></table></div>
+<div class="box2"><h2>📣 Announcements — Attendance — Fees</h2><p><b>Attendance:</b> Present 95% — For Future<br><b>Fees:</b> L$ — No Fake Rates — For Liberia<br><b>Announcement:</b> School open — For Education</p><input id="note" placeholder="Add announcement / note"><button class="blue" onclick="addNote()">Add Note</button><p id="notes"></p></div></div>
+<div class="card"><h2>👥 4 ROLES — Administrators, Teachers, Students, Parents</h2><p>Live Classes, Assignments, Quizzes, Grades, Attendance, Fees, Announcements — Secure — For Education — For Future</p></div>
 </div>
-
-<div class="grid">
-<div class="box"><h2>For Liberia — For Africa — For World — Entroknowty Learning Score — Based On Own Entroknowty — For Education — For Future</h2><p><b>Access:</b> Live Classes, Assignments, Quizzes, Test Scores, Attendance, Fees, Announcements, Entroknowty Learning, Blockchain Certificates</p><button class="blue" onclick="document.getElementById('role').focus()">View Student Portal</button></div>
-<div class="box2"><h2>With Love — Parent SMS Alerts — For Grades + Attendance + Fees — For $1 Data — Low Data — For Duala — For Liberia — For Family</h2><p><b>Access:</b> Child Grades, Attendance, Fees, Live Class Monitoring, Assignment Progress, Quiz Results, Announcements, Parent-Teacher Chat</p></div>
-</div>
-
-<div class="card"><h2>👥 4 ROLES — Administrators, Teachers, Students, Parents Profile — Secure Database</h2><p>Live Classes, Test Evaluation, Assignments, Quizzes, Other Activities — On School Portal — Official — Secure — Innovative Safeguard — 6 Layers — Biometric + Face ID + Device ID + 2FA 1775 + AES-256 + Blockchain — Hack-Proof — For Education — For Future</p></div>
-<p class="small">Life International School — With Love — For Mrs. Victoria K. Bangalu Sheriff — For Liberia Africa World</p>
-</div>
+<p class="small">Life International School — With Love — For Mrs. Victoria K. Bangalu Sheriff</p></div>
 <script>
-function login(){
-  var r=document.getElementById('role').value;
-  var e=document.getElementById('email').value;
-  var p=document.getElementById('pass').value;
-  var m=document.getElementById('msg');
-  if(r==='Select Role'||!e||!p){m.textContent='Please select Role + Email + Password — For Education';return;}
-  m.textContent='Welcome '+r+' — Login Secure — For Education — For Future — Please contact School Admin for your official account.';
+function getUsers(){try{return JSON.parse(localStorage.getItem('life_users')||'{}')}catch(e){return{}}}
+function saveUsers(u){localStorage.setItem('life_users',JSON.stringify(u))}
+function doCreate(){
+var r=document.getElementById('role').value,e=document.getElementById('email').value.trim().toLowerCase(),p=document.getElementById('pass').value,m=document.getElementById('msg');
+if(!e.includes('@')||e.includes(' ')){m.textContent='Email wrong — Remove spaces — Use like admin@life-school.lr';return;}
+if(p.length<4){m.textContent='Password too short — Use 4+ characters';return;}
+var u=getUsers(); if(u[e]){m.textContent='Account already exists — Press Secure Login now';return;}
+u[e]={role:r,pass:p}; saveUsers(u); m.textContent='✅ Account Created for '+e+' as '+r+' — Now press Secure Login';
 }
-</script>
-</body>
-</html>
+function doLogin(){
+var r=document.getElementById('role').value,e=document.getElementById('email').value.trim().toLowerCase(),p=document.getElementById('pass').value,m=document.getElementById('msg');
+if(!e.includes('@')||e.includes(' ')){m.textContent='Email wrong — Remove spaces — Example: admin@life-school.lr';return;}
+var u=getUsers(); if(!u[e]){m.textContent='No account yet — Press Create My Account First Time';return;}
+if(u[e].pass!==p){m.textContent='Wrong password — Try again';return;}
+localStorage.setItem('life_session',JSON.stringify({email:e,role:u[e].role}));
+showDash(e,u[e].role);
+}
+function showDash(e,role){document.getElementById('loginBox').style.display='none';document.getElementById('dashBox').style.display='block';document.getElementById('who').textContent=role;document.getElementById('who2').textContent=e+' — For Education — For Future';}
+function logout(){localStorage.removeItem('life_session');location.reload();}
+function addNote(){var v=document.getElementById('note').value;if(v)document.getElementById('notes').innerHTML+='• '+v+'<br>';document.getElementById('note').value='';}
+var s=JSON.parse(localStorage.getItem('life_session')||'null'); if(s) showDash(s.email,s.role);
+</script></body></html>
