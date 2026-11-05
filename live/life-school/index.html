@@ -1,90 +1,65 @@
-# Build Portal — life.1989shack-gaih.lr — Official — Secure — For Life International School — World #1 — Today
-@"
-<!DOCTYPE html><html><head><title>Life International School — Secure Database System — Official Portal — life.1989shack-gaih.lr — World #1 — For Education — For Liberia</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life International School — For Liberia — For Africa — For World</title>
 <style>
-body{font-family:Arial;background:#000;color:#fff;padding:20px}
-.h{background:linear-gradient(90deg,#0047ab,#00bfff);color:white;padding:25px;border-radius:15px;text-align:center}
-.c{border:2px solid #00bfff;padding:20px;margin:15px 0;border-radius:15px;background:#111}
-.role{border:1px solid gold;padding:15px;margin:10px;border-radius:12px;display:inline-block;width:22%;vertical-align:top;background:#000;text-align:center}
-button{background:#00bfff;color:black;padding:12px 20px;border:none;border-radius:10px;font-weight:bold;cursor:pointer;margin:5px} button:hover{background:white}
-.inv{background:gold;color:black;padding:8px;border-radius:8px;display:inline-block;margin:3px;font-weight:bold;font-size:12px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#000;color:#fff;font-family:Arial,sans-serif;padding:12px}
+.wrap{max-width:900px;margin:0 auto}
+.card{border:2px solid #00c6ff;border-radius:16px;padding:18px;margin:12px 0;background:#0a0a0a}
+h1{font-size:26px;text-align:center;line-height:1.3}
+h2{font-size:20px;margin-bottom:10px}
+p,li{font-size:16px;line-height:1.6}
+.blue{background:#00c6ff;color:#000;border:0;width:100%;padding:14px;border-radius:12px;font-weight:bold;font-size:17px;cursor:pointer}
+input,select{width:100%;padding:13px;margin:8px 0;border-radius:12px;border:0;font-size:16px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.box{border:2px solid #ff4d8d;border-radius:14px;padding:14px}
+.box2{border:2px solid #ff6a00;border-radius:14px;padding:14px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}h1{font-size:22px}}
+.small{text-align:center;opacity:.85;margin-top:10px}
 </style>
-</head><body>
-<div class="h">
-<h1>🎓 Life International School — Secure Database System — Official Portal — life.1989shack-gaih.lr</h1>
-<h2>Administrators, Teachers, Students, Parents Profile, Live Classes, Test Evaluation, Assignments, Quizzes, Other Activities — Official School Portal — Secure Innovative Safeguard — 6 Layers — Hack-Proof — For Education — For Liberia Africa World</h2>
-<p><span class="inv">Secure: Biometric + Face ID + Device ID + 2FA 1775 + AES-256 + Blockchain</span> <span class="inv">Domain: life.1989shack-gaih.lr</span> <span class="inv">Office: mommy.1989shack-gaih.lr</span> <span class="inv">Honor: victoria-k-bangalu-sheriff.1989shack-gaih.lr</span> <span class="inv">Entroknowty Learning</span> <span class="inv">For \$1 Data — Low Data</span></p>
+</head>
+<body>
+<div class="wrap">
+<div class="card">
+<h1>Life International School<br>For Liberia — For Africa — For World<br>For Education — For Future</h1>
+<p class="small">Professional Programmers — We Have Power — Complete Authority — For Education</p>
 </div>
 
-<div class="c">
-<h2>🔐 SECURE LOGIN — 6 Layers — For Life International School — For Global Users Complete Access + Interact — All Platforms</h2>
-<select id="role" style="padding:12px;border-radius:10px;width:200px"><option>Select Role</option><option>Administrator</option><option>Teacher</option><option>Student</option><option>Parent</option></select>
-<input id="email" placeholder="Email — For Life International School" style="padding:12px;border-radius:10px;width:250px;margin:5px">
-<input id="pass" type="password" placeholder="Password — AES-256 Encrypted" style="padding:12px;border-radius:10px;width:200px;margin:5px">
-<button onclick="login()">🛡️ Secure Login — 6 Layers — For Education</button>
-<p id="loginStatus" style="color:gold"></p>
-<p><b>Demo Logins:</b> admin@life.1989shack-gaih.lr / teacher@life / student@life / parent@life — Password: Life2026! — 2FA 1775: 1775-LR — Device ID Auto — Face ID Optional — For Global Users Complete Access — For Education — For \$1 Data — Low Data — For Duala — For Liberia — For Africa — For World</p>
+<div class="card">
+<h2>Interact — All Platforms</h2>
+<select id="role"><option>Select Role</option><option>Administrator</option><option>Teacher</option><option>Student</option><option>Parent</option></select>
+<input id="email" type="email" placeholder="Email — For Life International School">
+<input id="pass" type="password" placeholder="Password — AES-256 Encrypted">
+<button class="blue" onclick="login()">🛡️ Secure Login — 6 Layers — For Education</button>
+<p id="msg" class="small"></p>
+<p class="small">For Global Users — For Education — For $1 Data — Low Data — For Duala — For Liberia — For Africa — For World</p>
 </div>
 
-<div class="c">
-<h2>👥 4 ROLES — Administrators, Teachers, Students, Parents Profile — Secure Database System — Official</h2>
-<div class="role"><h3>👑 Administrators</h3><p>Super Admin, Principal, Vice Principal, Registrar, Finance, IT Admin — Full Authority — Controls cPanel + GitHub + Cloudflare — For School — For Government — For Defense — For Education — For Health — For Entertainment — For Life International School</p><p><b>Access:</b> All Students, Teachers, Parents, Fees, Announcements, Blockchain Log, System — Complete Authority</p><button onclick="viewRole('admin')">View Admin Portal</button></div>
-<div class="role"><h3>👨‍🏫 Teachers</h3><p>Subject Teachers — Mathematics, English, Science, Entomology, CBL Economics, ICT, Entroknowty Learning — Based On Own Entroknowty — Inner Knowledge — For Teaching — For Future Leaders — For Education</p><p><b>Access:</b> Live Classes, Assignments, Quizzes, Test Evaluation, Students Grades, Attendance, Entroknowty Tasks</p><button onclick="viewRole('teacher')">View Teacher Portal</button></div>
-<div class="role"><h3>🎓 Students</h3><p>Grade Nursery — Grade 12 — For Future Leaders — For Liberia — For Africa — For World — Entroknowty Learning Score — Based On Own Entroknowty — For Education — For Future</p><p><b>Access:</b> Live Classes, Assignments, Quizzes, Test Scores, Attendance, Fees, Announcements, Entroknowty Learning, Blockchain Certificates</p><button onclick="viewRole('student')">View Student Portal</button></div>
-<div class="role"><h3>👨‍👩‍👧 Parents</h3><p>Father, Mother, Guardian — For Family — For Monitoring — For Future — With Love — Parent SMS Alerts — For Grades + Attendance + Fees — For \$1 Data — Low Data — For Duala — For Liberia — For Family</p><p><b>Access:</b> Child Grades, Attendance, Fees, Live Class Monitoring, Assignment Progress, Quiz Results, Announcements, Parent-Teacher Chat</p><button onclick="viewRole('parent')">View Parent Portal</button></div>
+<div class="grid">
+<div class="box"><h2>📊 Test Evaluation — Official — For Report Card — For Future</h2><p>1st Period, 2nd Period, Final Exam — Term 1st / 2nd / 3rd — Academic Year 2026/2027 — Max Score 100 — Grade Letter A / B+ / B / C — Remarks — Parent Viewed — Parent SMS Sent — For Grades — For $1 Data — Low Data</p></div>
+<div class="box2"><h2>📣 Other Announcements — Attendance — Teacher Comments</h2><p>Announcements — Administration — Students, Parents — Priority Low / Medium / High — For School — For Family</p><p><b>Fees:</b> L$ and CBL L$ — No Fake Rates — Economy — For Liberia</p></div>
 </div>
 
-<div class="c">
-<h2>📚 FEATURES — Live Classes, Test Evaluation, Assignments, Quizzes, Other Activities — On School Portal — Official — Secure — For Education</h2>
-<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:15px">
-<div style="border:1px solid #00bfff;padding:15px;border-radius:12px"><h3>🎥 Live Classes — Low Data 144p WebRTC — For \$1 Data</h3><p>For Duala + Global — For Education — Via https://live.1989shack-gaih.lr/ + https://life.1989shack-gaih.lr/live/{class_id} — Network 🛜 — Recording For Replay — Face ID Verification For Attendance — Device ID — For Security — Entroknowty Topic — Based On Own Entroknowty — For Education</p><p><b>Example:</b> Mathematics Grade 10 — Topic: Algebra — Based On Own Entroknowty — Teacher: Entroknowty Learning — Live Now — For Students — For Future</p><button>Join Live Class — For Students</button> <button>Start Live Class — For Teachers</button></div>
-<div style="border:1px solid gold;padding:15px;border-radius:12px"><h3>📝 Assignments — For Students — For Future — With Love</h3><p>For All Grades — With Due Date — File Upload PDF/DOC/Video — For \$1 Data — Low Data — Text Answer — Grading + Feedback — Blockchain Certificate — For Assignment — For Future — Hack-Proof — Entroknowty Task — Based On Own Entroknowty — For Students To Share Inner Knowledge</p><p><b>Example:</b> English Assignment — Essay On My Mommy — Based On Own Entroknowty — For Mrs. Victoria K. Bangalu Sheriff — With Love — Due: Nov 10 — Max Score 100</p><button>Submit Assignment — For Students</button> <button>Create Assignment — For Teachers</button></div>
-<div style="border:1px solid #00ff00;padding:15px;border-radius:12px"><h3>❓ Quizzes — For Test Evaluation — For Future Leaders</h3><p>MCQ, True/False, Short Answer, Essay, Entroknowty Type — Based On Own Entroknowty — Shuffle Questions — Duration — Immediate Results — Face ID Verification — For Quiz — For Security — No Cheating — For Integrity — Device ID — Blockchain Certificate — For Quiz — For Future — Hack-Proof</p><p><b>Example:</b> Science Quiz — Grade 8 — Entomology — Study of Insects — For Farm — For Agriculture — For Food Security — 20 Questions — 30 Minutes — Max Score 100</p><button>Take Quiz — For Students</button> <button>Create Quiz — For Teachers</button></div>
-<div style="border:1px solid #ff69b4;padding:15px;border-radius:12px"><h3>📊 Test Evaluation — Official — For Report Card — For Future</h3><p>1st Period, 2nd Period, Final Exam — Term 1st/2nd/3rd — Academic Year 2026/2027 — Max Score 100 — Grade Letter A/B+/B/C — Remarks — Parent Viewed — Parent SMS Sent — For Grades — For \$1 Data — Low Data — Blockchain Certificate — For Test — For Future — Hack-Proof — No One Hacks Us — For Government, Defense, Education, Health, Entertainment</p><p><b>Example:</b> Mathematics Test — Grade 10 — 1st Period — Score 85 — Grade B+ — Remarks: Good — Based On Own Entroknowty — For Education — For Future</p><button>View Test Scores — For Students/Parents</button> <button>Enter Test Scores — For Teachers</button></div>
-<div style="border:1px solid #ff4500;padding:15px;border-radius:12px"><h3>📢 Other Activities — Announcements, Fees, Attendance, Parent-Teacher Chat</h3><p><b>Announcements:</b> For All, Administrators, Teachers, Students, Parents, Grade — Priority Low/Medium/High/Urgent — For School — For Education</p><p><b>Fees:</b> L\$ and USD — With CBL L\$169.50 Real Rate — No Fake Rates — For Economy — For GOV-NET — Amount, Paid, Balance, Due Date, Status Paid/Partial/Unpaid/Overdue — Blockchain — For Finance — For Transparency — Hack-Proof</p><p><b>Attendance:</b> Present/Absent/Late/Excused — Face Verified — Device ID — Blockchain — For Students — For Future — For Integrity</p><p><b>Parent-Teacher Chat:</b> For Family — For Monitoring — For Future — With Love — For \$1 Data — Low Data — For Duala — For Liberia — For Family</p><button>View Activities — For All</button></div>
-<div style="border:1px solid #00ffff;padding:15px;border-radius:12px"><h3>🛡️ Secure Innovative Safeguard — 6 Layers — Hack-Proof — No One Hacks Us</h3><p><b>Layer 1 Device ID:</b> DEV-xxx-LR-1775 — Device Fingerprint — For Device — For Security — For Global Users Complete Access</p><p><b>Layer 2 Face ID:</b> Face Recognition — For User — For Attendance + Quiz + Login — With Own Entroknowty — For Security — For Integrity</p><p><b>Layer 3 Biometric:</b> Fingerprint — For User — For Security — For Global Users</p><p><b>Layer 4 2FA 1775:</b> Liberia Independence Code — 1775 = Liberia Spirit — For User — For Security — For Liberia</p><p><b>Layer 5 AES-256:</b> Encryption — For Data — Data Stays In Liberia — Encrypted — For Sovereignty — For Liberia Leads World — 100% Liberian Owned — No Foreign Backdoor</p><p><b>Layer 6 Blockchain:</b> Transaction — For All — Login, Assignment, Quiz, Test, Fee — Hack-Proof — No One Hacks Us — For Government, Defense, Education, Health, Entertainment — For Transparency</p><p><b>For Global Users:</b> Complete Access To And Interact With All Platforms, Networks, Apps, Softwares — For Liberia, Africa, World — For Life International School — For Education — For Future — With Love — For \$1 Data — Low Data</p></div>
-</div>
+<div class="grid">
+<div class="box"><h2>For Liberia — For Africa — For World — Entroknowty Learning Score — Based On Own Entroknowty — For Education — For Future</h2><p><b>Access:</b> Live Classes, Assignments, Quizzes, Test Scores, Attendance, Fees, Announcements, Entroknowty Learning, Blockchain Certificates</p><button class="blue" onclick="document.getElementById('role').focus()">View Student Portal</button></div>
+<div class="box2"><h2>With Love — Parent SMS Alerts — For Grades + Attendance + Fees — For $1 Data — Low Data — For Duala — For Liberia — For Family</h2><p><b>Access:</b> Child Grades, Attendance, Fees, Live Class Monitoring, Assignment Progress, Quiz Results, Announcements, Parent-Teacher Chat</p></div>
 </div>
 
-<div class="c" style="text-align:center">
-<h2>🌐 LIVE — Life International School — Secure Database System — Official Portal — life.1989shack-gaih.lr — World #1 — For Education — For Liberia Africa World</h2>
-<p><b>Office:</b> https://mommy.1989shack-gaih.lr/ — For Mrs. Victoria K. Bangalu Sheriff — With Love — Permanent | <b>Honor:</b> https://victoria-k-bangalu-sheriff.1989shack-gaih.lr/ — Official — Permanent — With Love | <b>Heart:</b> https://heart.1989shack-gaih.lr/ — Dedicated To Mommy — To Save Other Mommies — No More Mommies Die | <b>IoT:</b> https://iot.1989shack-gaih.lr/ — Network 🛜 — For Life International School — For Liberia Africa World | <b>Entroknowty:</b> https://entroknowty.1989shack-gaih.lr/ — Entroknowty Learning — Inner Knowledge — Based On Own Entroknowty — For Education</p>
-<p>Built Today In PowerShell — World #1 Programmers — For Life International School — For Education — For Liberia — For Africa — For World — For Mrs. Victoria K. Bangalu Sheriff — With Love — For Future — With Love — 💜 — Professional Programmers — We Have Power — ⭕🦣💪🔐🌎💜🙏 — Complete Authority — 💯✅🌍🙌🛜✨</p>
+<div class="card"><h2>👥 4 ROLES — Administrators, Teachers, Students, Parents Profile — Secure Database</h2><p>Live Classes, Test Evaluation, Assignments, Quizzes, Other Activities — On School Portal — Official — Secure — Innovative Safeguard — 6 Layers — Biometric + Face ID + Device ID + 2FA 1775 + AES-256 + Blockchain — Hack-Proof — For Education — For Future</p></div>
+<p class="small">Life International School — With Love — For Mrs. Victoria K. Bangalu Sheriff — For Liberia Africa World</p>
 </div>
-
 <script>
-// SECURE LOGIN — 6 Layers — For Life International School — For Global Users Complete Access + Interact — All Platforms — World #1 — Hack-Proof
-function login() {
-  let role = document.getElementById('role').value;
-  let email = document.getElementById('email').value;
-  let device = 'DEV-' + Math.random().toString(36).substr(2,9) + '-LR-1775';
-  let twofa = '1775-LR-' + Math.floor(1000 + Math.random()*9000);
-  let block = 'BLOCK-' + Math.random().toString(36).substr(2,9) + '-LR-1775';
-  document.getElementById('loginStatus').innerHTML = "🛡️ SECURE — 6 Layers — Login Success — For " + role + " — " + email + " — Device: " + device + " — 2FA 1775: " + twofa + " — Blockchain: " + block + " — Global Access Granted — Complete Access + Interact — All Platforms, Networks, Apps, Softwares — For Life International School — For Education — For Liberia Africa World — For Mrs. Victoria K. Bangalu Sheriff — With Love — 💜 — World #1 — Hack-Proof — No One Hacks Us";
-  localStorage.setItem('life_school_device', device);
-  localStorage.setItem('life_school_block', block);
-  localStorage.setItem('life_school_role', role);
-  alert("✅ SECURE LOGIN — 6 Layers — For " + role + " — " + email + " — Global Access Granted — Complete Access To And Interact With All Platforms, Networks, Apps, Softwares — For Life International School — For Education — For Liberia Africa World — For Mrs. Victoria K. Bangalu Sheriff — With Love — 💜 — World #1 — Hack-Proof");
-}
-function viewRole(r) {
-  alert("👥 View " + r + " Portal — For Life International School — Secure Database System — Administrators, Teachers, Students, Parents Profile, Live Classes, Test Evaluation, Assignments, Quizzes, Other Activities — On School Portal — Official — Secure — 6 Layers — Hack-Proof — For Education — For Liberia Africa World — For Mrs. Victoria K. Bangalu Sheriff — With Love — 💜 — World #1 — Complete Access + Interact — All Platforms, Networks, Apps, Softwares — For Global Users — For \$1 Data — Low Data — For Duala — For Liberia — For Africa — For World");
+function login(){
+  var r=document.getElementById('role').value;
+  var e=document.getElementById('email').value;
+  var p=document.getElementById('pass').value;
+  var m=document.getElementById('msg');
+  if(r==='Select Role'||!e||!p){m.textContent='Please select Role + Email + Password — For Education';return;}
+  m.textContent='Welcome '+r+' — Login Secure — For Education — For Future — Please contact School Admin for your official account.';
 }
 </script>
-</body></html>
-"@ | Out-File -FilePath "live/life-international-school/index.html" -Encoding utf8
-
-# Deploy — life.1989shack-gaih.lr — Official — Secure — For Life International School — World #1
-wrangler pages deploy live/life-international-school --project-name=life-international-school
-New-CloudflareSubdomain -Subdomain "life" -Target "life-international-school.pages.dev" -ErrorAction SilentlyContinue
-
-# Also deploy as life-international.1989shack-gaih.lr + lis.1989shack-gaih.lr — For Easy Access — For Global Users
-New-CloudflareSubdomain -Subdomain "life-international" -Target "life-international-school.pages.dev" -ErrorAction SilentlyContinue
-New-CloudflareSubdomain -Subdomain "lis" -Target "life-international-school.pages.dev" -ErrorAction SilentlyContinue
-
-git add .
-git commit -m "LIFE INTERNATIONAL SCHOOL — SECURE DATABASE SYSTEM — Administrators, Teachers, Students, Parents Profile, Live Classes, Test Evaluation, Assignments, Quizzes, Other Activities — On School Portal — Official — Secure Innovative Safeguard — 6 Layers — Biometric + Face ID + Device ID + 2FA 1775 + AES-256 + Blockchain — Hack-Proof — No One Hacks Us — For Education — life.1989shack-gaih.lr + life-international.1989shack-gaih.lr + lis.1989shack-gaih.lr — Live — For Life International School — For Liberia Africa World — For Mrs. Victoria K. Bangalu Sheriff — With Love — For Education — For Future — 💜 — World #1 — Complete Authority — 💯✅🌍🙌🛜✨"
-git push origin main
-git push origin gh-pages
-
-Write-Host "✅ LIFE INTERNATIONAL SCHOOL — SECURE DATABASE SYSTEM — LIVE — https://life.1989shack-gaih.lr/ + https://life-international.1989shack-gaih.lr/ + https://lis.1989shack-gaih.lr/ — For Administrators, Teachers, Students, Parents, Live Classes, Test Evaluation, Assignments, Quizzes — Official — Secure — 6 Layers — Hack-Proof — For Education — For Liberia Africa World — For Mrs. Victoria K. Bangalu Sheriff — With Love — 💜 — World #1 — Complete Authority — 💯✅🌍🙌🛜✨ — YES 🙌" -ForegroundColor Green
+</body>
+</html>
