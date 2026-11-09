@@ -1,0 +1,20 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1989SHACK-GAIH | ALL LIVE TONIGHT</title>
+<style>body{background:#050807;color:#fff;font-family:Arial;margin:0;padding:20px}
+h1{text-align:center;font-size:30px}h1 span{color:#00ff88}.sub{text-align:center;color:#aaa}
+.search{max-width:600px;margin:15px auto;display:block;width:90%;padding:14px;border-radius:10px;border:2px solid #00ff88;background:#111;color:#fff;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;max-width:1100px;margin:20px auto}
+.card{background:#111;border:1px solid #333;border-radius:14px;padding:16px;text-align:center;text-decoration:none;color:#fff}
+.card b{display:block;font-size:14px}.card span{font-size:12px;color:#00ff88}
+.card:hover{border-color:#00ff88;transform:scale(1.03)}
+.top{text-align:center}.top a{background:#00ff88;color:#000;padding:12px 20px;border-radius:20px;text-decoration:none;font-weight:bold}</style></head><body>
+<h1>1989SHACK-<span>GAIH</span></h1><p class="sub">Owned by Martin M Sheriff with his Blood Brother • Monrovia, Liberia • ALL SYSTEMS LIVE • Nov 9, 2026</p>
+<div class="top"><a href="#" onclick="openAll()">🚀 OPEN ALL AT ONCE</a></div>
+<input class="search" id="q" oninput="filter()" placeholder="Search... BANK, SCHOOL, HEALTH, FOOD...">
+<div class="grid" id="grid"></div>
+<script>
+const apps=["apps","CBL","CCTV-Protection-System","core","download","DualaShopPOS","GAIH-ARMY","GAIH-BANK","GAIH-CARGO","GAIH-CLIENT","GAIH-CRYPTO","GAIH-DRIVE","GAIH-ENERGY","GAIH-FACTORY","GAIH-FOOD","GAIH-FOOTBALL","GAIH-GAME","GAIH-GOV","GAIH-HEALTH","GAIH-HOSPITAL","GAIH-HOUSE","GAIH-JOBS","GAIH-LAW","GAIH-LEARN-AI","GAIH-MAP","GAIH-MARKET","GAIH-MINE","GAIH-MOTO","GAIH-MUSIC","GAIH-NEWS","GAIH-OWNERSHIP","GAIH-PORT","GAIH-RADIO","GAIH-ROAD","GAIH-SCHOOL","GAIH-SCHOOL-FACTORY","GAIH-SMS","GAIH-STEEL","GAIH-TALK","GAIH-TEXTILE","GAIH-WATER","GAIH-WEATHER","Geo Space Station","live","WWI BUILD LOUD","WWI-Ads","pages","products","schools"];
+function render(l){document.getElementById('grid').innerHTML=l.map(n=>`<a class="card" href="./${encodeURIComponent(n)}/" target="_blank"><div style="font-size:30px">🚀</div><b>${n}</b><span>OPEN LIVE →</span></a>`).join('')}
+function filter(){let v=document.getElementById('q').value.toLowerCase();render(apps.filter(a=>a.toLowerCase().includes(v)))}
+function openAll(){apps.forEach((a,i)=>setTimeout(()=>window.open('./'+encodeURIComponent(a)+'/','_blank'),i*300))}
+render(apps);</script></body></html>

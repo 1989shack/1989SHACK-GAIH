@@ -1,0 +1,14 @@
+tunnel: gaihp
+credentials-file: C:\Users\Admin\.cloudflared\0b177793-027d-4bc4-acbe-d5a653b13854.json
+ingress:
+    - hostname: 1989shack.com
+    service: http://localhost:80
+    - hostname: www.1989shack.com
+    service: http://localhost:80
+    - hostname: app.1989shack.com
+    service: http://localhost:80
+    - hostname: lifeinternationalschool.lr
+    service: http://localhost:80
+    - hostname: www.lifeinternationalschool.lr
+    service: http://localhost:80
+    - service: http_status:404
