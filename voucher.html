@@ -1,19 +1,33 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GAIHP FACTORY - Monrovia - Global Network</title>
-<style>body{font-family:Arial;background:#0b1220;color:#fff;margin:0;text-align:center}header{background:#111c33;padding:30px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;padding:20px;max-width:900px;margin:auto}.card{background:#111c33;padding:18px;border-radius:14px}h2{color:#4ade80}footer{background:#000;padding:20px;color:#cbd5e1;font-size:13px}a{color:#4ade80}</style>
+<title>GAIH ISP Voucher - Monrovia</title>
+<style>body{font-family:Arial;background:#0b1220;color:#fff;margin:0;text-align:center}header{background:#111c33;padding:30px}.box{background:#111c33;padding:25px;border-radius:16px;max-width:500px;margin:20px auto}input{padding:12px;width:80%;border-radius:10px;border:0;font-size:16px;text-align:center}button{background:#22c55e;color:#000;border:0;padding:12px 22px;border-radius:10px;font-weight:bold;margin-top:12px}a{color:#4ade80}</style>
 </head>
 <body>
-<header><h1>GAIHP FACTORY - BUILT TODAY - MONROVIA</h1><p>Global Architecture Infrastructure Hosting Platform</p><p>ONLINE - GLOBAL - Team + Network First</p></header>
-<div class="grid">
-<div class="card"><h2>GAIH-DRIVE - 8000</h2><p>Files - ONLINE</p></div>
-<div class="card"><h2>GAIH-SCHOOL - 3001</h2><p>Students / Teachers - ONLINE</p></div>
-<div class="card"><h2>GAIH-CLIENT - 3002</h2><p>cPanel + Support - ONLINE</p></div>
-<div class="card"><h2>GAIH-FACTORY - 3003</h2><p>This Page - ONLINE</p></div>
-<div class="card"><h2>GAIH-ARMY</h2><p>Security - ONLINE</p></div>
-<div class="card"><h2>ISP VOUCHER + LNP</h2><p>Building Next - Phase 2</p></div>
+<header><h1>GAIH ISP VOUCHER</h1><p>Monrovia - Team + Network First</p><p><a href="/">Back to Factory</a></p></header>
+<div class="box">
+<h2>Enter Voucher Code</h2>
+<input id="code" placeholder="e.g. GAIH-100">
+<br><button onclick="check()">Check Voucher</button>
+<p id="result"></p>
+<h3>Plans</h3>
+<p><b>1 Hour</b> - 1,000 LRD</p>
+<p><b>1 Day</b> - 5,000 LRD</p>
+<p><b>1 Week</b> - 25,000 LRD</p>
+<p><b>1 Month</b> - 80,000 LRD</p>
+<p>Demo: GAIH-100 = 1 Hour, GAIH-DAY = 1 Day, GAIH-WEEK = 1 Week</p>
 </div>
-<footer><p>Backbone: 1989shack.com | bloodbrothers.net | lifeinternationalschool.lr | stmathew.lr</p><p>Built by Blood Brothers - For Liberia - Africa - World - For Mrs. Victoria K. Bangalu Sheriff</p></footer>
+<script>
+function check(){
+var c=document.getElementById('code').value.trim().toUpperCase();
+var r=document.getElementById('result');
+if(c==='GAIH-100'){r.innerHTML='VALID - 1 Hour Plan - Activated!';}
+else if(c==='GAIH-DAY'){r.innerHTML='VALID - 1 Day Plan - Activated!';}
+else if(c==='GAIH-WEEK'){r.innerHTML='VALID - 1 Week Plan - Activated!';}
+else if(c===''){r.innerHTML='Please enter a code';}
+else{r.innerHTML='INVALID CODE - Try GAIH-100';}
+}
+</script>
 </body>
 </html>
