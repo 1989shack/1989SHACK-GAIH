@@ -1,4 +1,4 @@
-﻿const express = require('express');
+const express = require('express');
 const path = require('path');
 const app = express();
 app.use(express.json());
@@ -10,5 +10,5 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', app: '1989SHACK-GAIH' });
 });
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.log('GAIH running on ' + PORT));
+app.listen(PORT);
 module.exports = app;
