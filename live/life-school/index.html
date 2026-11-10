@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Life International School — Portal — Cloud</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>*{box-sizing:border-box}body{background:#000;color:#fff;font-family:Arial;padding:12px;margin:0}.wrap{max-width:900px;margin:auto}.card{border:2px solid #00c6ff;border-radius:16px;padding:18px;margin:12px 0;background:#0a0a0a}h1{font-size:24px;text-align:center}input,select{width:100%;padding:13px;margin:8px 0;border-radius:12px;border:0;font-size:16px}.blue{background:#00c6ff;color:#000;border:0;width:100%;padding:14px;border-radius:12px;font-weight:bold;font-size:17px;cursor:pointer}.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.box{border:2px solid #ff4d8d;border-radius:14px;padding:14px}.box2{border:2px solid #ff6a00;border-radius:14px;padding:14px}@media(max-width:600px){.grid{grid-template-columns:1fr}}.small{text-align:center;opacity:.85}.red{background:#ff3b3b;color:#fff;border:0;padding:10px 16px;border-radius:10px;cursor:pointer}table{width:100%;border-collapse:collapse;margin-top:10px}td,th{border:1px solid #333;padding:8px;font-size:14px}</style></head>
+<body><div class="wrap">
+<div id="loginBox">
+<div class="card"><h1>Life International School<br>For Liberia — For Africa — For World<br>Cloud Database — Supabase</h1><p class="small">Create once on ANY phone — Login on ANY phone — Same account everywhere</p></div>
+<div class="card"><h2>Login / Create Account — Cloud</h2>
+<select id="role"><option>Administrator</option><option>Teacher</option><option>Student</option><option>Parent</option></select>
+<input id="email" type="email" placeholder="Email — Example: admin@life-school.lr">
+<input id="pass" type="password" placeholder="Password — Keep private">
+<button class="blue" onclick="doLogin()">🛡️ Secure Login — Cloud</button>
+<button class="blue" style="background:#ffcc00;margin-top:8px" onclick="doCreate()">✨ Create My Account — Cloud</button>
+<p id="msg" class="small"></p></div></div>
+<div id="dashBox" style="display:none">
+<div class="card"><h1>Welcome <span id="who"></span> 👋<br>Life School Portal — Cloud Dashboard</h1><p class="small" id="who2"></p><button class="red" onclick="logout()">Logout</button></div>
+<div class="grid"><div class="box"><h2>📊 Test Evaluation — Official</h2><p>1st Period, 2nd Period, Final Exam — Term 1st / 2nd / 3rd — 2026/2027 — Max 100</p><table><tr><th>Subject</th><th>Score</th><th>Grade</th></tr><tr><td>Math</td><td>88</td><td>A</td></tr><tr><td>English</td><td>82</td><td>B+</td></tr><tr><td>Science</td><td>90</td><td>A</td></tr></table></div>
+<div class="box2"><h2>📣 Announcements — Attendance — Fees</h2><p><b>Attendance:</b> Present 95%<br><b>Fees:</b> L$ — No Fake Rates<br><b>Announcement:</b> School open — For Education</p></div></div>
+<div class="card"><h2>👥 4 ROLES — Administrators, Teachers, Students, Parents</h2><p>Cloud Database — Same account on all phones — Secure — For Education — For Future</p></div></div>
+<p class="small">Life International School — With Love — For Mrs. Victoria K. Bangalu Sheriff</p></div>
+<script>
+const SUPABASE_URL = "https://gnkqxrawkfbmobrkvofy.supabase.co";
+const SUPABASE_KEY = "sb_publishable_-TGMrfYkK6XHJeo3YuNHRw_Ud5uBxnc";
+const sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+async function doCreate(){
+var r=document.getElementById('role').value,e=document.getElementById('email').value.trim().toLowerCase(),p=document.getElementById('pass').value,m=document.getElementById('msg');
+if(!e.includes('@')){m.textContent='Email wrong — Use like admin@life-school.lr';return;}
+if(p.length<6){m.textContent='Password must be 6+ characters — Supabase rule';return;}
+m.textContent='Creating...';
+const {data,error}=await sb.auth.signUp({email:e,password:p,options:{data:{role:r}}});
+if(error){m.textContent=error.message;return;}
+m.textContent='✅ Cloud Account Created for '+e+' as '+r+' — Now press Secure Login';
+}
+async function doLogin(){
+var e=document.getElementById('email').value.trim().toLowerCase(),p=document.getElementById('pass').value,m=document.getElementById('msg');
+m.textContent='Logging in...';
+const {data,error}=await sb.auth.signInWithPassword({email:e,password:p});
+if(error){m.textContent=error.message+' — Press Create first if no account yet';return;}
+showDash(data.user.email, data.user.user_metadata?.role||'User');
+}
+function showDash(email,role){document.getElementById('loginBox').style.display='none';document.getElementById('dashBox').style.display='block';document.getElementById('who').textContent=role;document.getElementById('who2').textContent=email+' — Cloud — For Education — For Future';}
+async function logout(){await sb.auth.signOut();location.reload();}
+sb.auth.getSession().then(({data})=>{if(data.session) showDash(data.session.user.email, data.session.user.user_metadata?.role||'User');});
+</script></body></html>

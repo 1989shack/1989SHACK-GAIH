@@ -1,0 +1,7 @@
+[
+  {"id":1, "name":"Orange Credit ", "price":1, "stock":100, "image":"credit.jpg", "category":"Mobile"},
+  {"id":2, "name":"Gari Small Bag", "price":0.5, "stock":50, "image":"gari.jpg", "category":"Food"},
+  {"id":3, "name":"1989SHACK Soap", "price":0.75, "stock":100, "image":"soap.jpg", "category":"Factory"},
+  {"id":4, "name":"Cold Water Bag", "price":0.25, "stock":200, "image":"water.jpg", "category":"Drink"},
+  {"id":5, "name":"GAIH-EDU 1 Hour", "price":0.25, "stock":999, "image":"edu.jpg", "category":"Education"}
+]

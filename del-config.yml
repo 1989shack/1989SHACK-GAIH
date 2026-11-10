@@ -1,0 +1,19 @@
+del config.yml
+$L = @()
+$L += "tunnel: db31ad12-046d-4c20-a900-0c72cc02c557"
+$L += "credentials-file: C:\Users\Admin\.cloudflared\db31ad12-046d-4c20-a900-0c72cc02c557.json"
+$L += "protocol: http2"
+$L += "ingress:"
+$L += "  - hostname: app.1989shack.com"
+$L += "    service: http://localhost:80"
+$L += "  - hostname: 1989shack.com"
+$L += "    service: http://localhost:80"
+$L += "  - hostname: bloodbrothers.net"
+$L += "    service: http://localhost:80"
+$L += "  - hostname: lifeinternationalschool.lr"
+$L += "    service: http://localhost:3001"
+$L += "  - hostname: stmathew.lr"
+$L += "    service: http://localhost:3001"
+$L += "  - service: http_status:404"
+$L | Set-Content -Encoding ascii config.yml
+type config.yml

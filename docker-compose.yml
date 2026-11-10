@@ -1,0 +1,96 @@
+version: '3.8'
+services:
+  nextcloud-db:
+    image: mariadb:10.6
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 1989Shack2024!
+      MYSQL_DATABASE: nextcloud
+      MYSQL_USER: nextcloud
+      MYSQL_PASSWORD: 1989Shack2024!
+    volumes:
+      - ./nextcloud-data/db:/var/lib/mysql
+
+  nextcloud:
+    image: nextcloud:latest
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      MYSQL_HOST: nextcloud-db
+      MYSQL_DATABASE: nextcloud
+      MYSQL_USER: nextcloud
+      MYSQL_PASSWORD: 1989Shack2024!
+      NEXTCLOUD_ADMIN_USER: admin
+      NEXTCLOUD_ADMIN_PASSWORD: 1989Admin!
+      NEXTCLOUD_TRUSTED_DOMAINS: drive.1989shack.com localhost 127.0.0.1
+    volumes:
+      - ./nextcloud-data/files:/var/www/html
+    depends_on:
+      - nextcloud-db
+
+  # Optional: OnlyOffice for editing Word/Excel inside Drive!
+  onlyoffice:
+    image: onlyoffice/documentserver
+    restart: always
+    ports:
+      - "8081:80"
+
+
+  # GAIH-MAIL REAL - Mailu Email Server
+  mailu-front:
+    image: ghcr.io/mailu/nginx:2.0
+    restart: always
+    env_file: mailu.env
+    ports:
+      - "80:80"
+      - "443:443"
+      - "25:25"
+      - "110:110"
+      - "143:143"
+      - "587:587"
+      - "993:993"
+      - "995:995"
+    volumes:
+      - "./mailu-data/certs:/certs"
+      - "./mailu-data/overrides/nginx:/overrides"
+
+  mailu-admin:
+    image: ghcr.io/mailu/admin:2.0
+    restart: always
+    env_file: mailu.env
+    volumes:
+      - "./mailu-data/data:/data"
+      - "./mailu-data/dkim:/dkim"
+
+  mailu-imap:
+    image: ghcr.io/mailu/dovecot:2.0
+    restart: always
+    env_file: mailu.env
+    volumes:
+      - "./mailu-data/data:/data"
+      - "./mailu-data/dkim:/dkim"
+
+  mailu-smtp:
+    image: ghcr.io/mailu/postfix:2.0
+    restart: always
+    env_file: mailu.env
+    volumes:
+      - "./mailu-data/data:/data"
+      - "./mailu-data/dkim:/dkim"
+
+  mailu-antispam:
+    image: ghcr.io/mailu/rspamd:2.0
+    restart: always
+    env_file: mailu.env
+    volumes:
+      - "./mailu-data/data:/data"
+      - "./mailu-data/dkim:/dkim"
+      - "./mailu-data/filter:/var/lib/rspamd"
+
+  mailu-webmail:
+    image: ghcr.io/mailu/roundcube:2.0
+    restart: always
+    env_file: mailu.env
+    volumes:
+      - "./mailu-data/data:/data"
