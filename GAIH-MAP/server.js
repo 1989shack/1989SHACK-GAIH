@@ -1,5 +1,0 @@
-const express=require('express');const app=express();
-app.use(express.static(__dirname));
-app.get('/',(req,res)=>res.send(<html><body style="background:#111;color:#0f0;font-family:monospace;padding:20px;text-align:center"><h1>??? GAIH-MAP</h1><h2 style="color:#ff0">Liberian Google Maps - Kekeh routes</h2><h3 style="color:#0ff">Port 13023 ONLINE - NEW INVENTION!</h3><p>Output: Duala to Congo Town kekeh AI routes</p><p>Location: C:\\inetpub\\wwwroot\\1989SHACK-GAIH\\GAIH-MAP</p><p>Factory that builds factories!</p><br><a href="http://0.0.0.0:13020" style="color:#0ff;font-size:20px">?? Back to Empire Dashboard</a><br><br><a href="http://0.0.0.0:10001" style="color:#f80">?? Duala Shop</a></body></html>));
-app.get('/api/status',(req,res)=>res.json({wheel:'GAIH-MAP',port:13023,desc:'Liberian Google Maps - Kekeh routes',output:'Duala to Congo Town kekeh AI routes',status:'ONLINE - NEW INVENTION 2026',empire:'GAIH - Expanding to 37 ports!',location:'Monrovia, Liberia'}));
-app.listen(13023,()=>console.log('GAIH-MAP ONLINE 13023 - Liberian Google Maps - Kekeh routes'));

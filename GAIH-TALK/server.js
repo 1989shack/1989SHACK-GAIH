@@ -1,5 +1,0 @@
-const express=require('express');const app=express();
-app.use(express.static(__dirname));
-app.get('/',(req,res)=>res.send(<html><body style="background:#111;color:#0f0;font-family:monospace;padding:20px;text-align:center"><h1>?? GAIH-TALK</h1><h2 style="color:#ff0">Liberian WhatsApp - No Meta! Free calls</h2><h3 style="color:#0ff">Port 13022 ONLINE - NEW INVENTION!</h3><p>Output: Free calls Monrovia - No data cost</p><p>Location: C:\\inetpub\\wwwroot\\1989SHACK-GAIH\\GAIH-TALK</p><p>Factory that builds factories!</p><br><a href="http://0.0.0.0:13020" style="color:#0ff;font-size:20px">?? Back to Empire Dashboard</a><br><br><a href="http://0.0.0.0:10001" style="color:#f80">?? Duala Shop</a></body></html>));
-app.get('/api/status',(req,res)=>res.json({wheel:'GAIH-TALK',port:13022,desc:'Liberian WhatsApp - No Meta! Free calls',output:'Free calls Monrovia - No data cost',status:'ONLINE - NEW INVENTION 2026',empire:'GAIH - Expanding to 37 ports!',location:'Monrovia, Liberia'}));
-app.listen(13022,()=>console.log('GAIH-TALK ONLINE 13022 - Liberian WhatsApp - No Meta! Free calls'));

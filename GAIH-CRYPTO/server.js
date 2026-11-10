@@ -1,5 +1,0 @@
-const express=require('express');const app=express();
-app.use(express.static(__dirname));
-app.get('/',(req,res)=>res.send(<html><body style="background:#111;color:#0f0;font-family:monospace;padding:20px;text-align:center"><h1>?? GAIH-CRYPTO</h1><h2 style="color:#ff0">Liberian Crypto - LRD stablecoin</h2><h3 style="color:#0ff">Port 13021 ONLINE - NEW INVENTION!</h3><p>Output: MoMo to crypto - LRD token</p><p>Location: C:\\inetpub\\wwwroot\\1989SHACK-GAIH\\GAIH-CRYPTO</p><p>Factory that builds factories!</p><br><a href="http://0.0.0.0:13020" style="color:#0ff;font-size:20px">?? Back to Empire Dashboard</a><br><br><a href="http://0.0.0.0:10001" style="color:#f80">?? Duala Shop</a></body></html>));
-app.get('/api/status',(req,res)=>res.json({wheel:'GAIH-CRYPTO',port:13021,desc:'Liberian Crypto - LRD stablecoin',output:'MoMo to crypto - LRD token',status:'ONLINE - NEW INVENTION 2026',empire:'GAIH - Expanding to 37 ports!',location:'Monrovia, Liberia'}));
-app.listen(13021,()=>console.log('GAIH-CRYPTO ONLINE 13021 - Liberian Crypto - LRD stablecoin'));

@@ -1,5 +1,0 @@
-const express=require('express');const app=express();
-app.use(express.static(__dirname));
-app.get('/',(req,res)=>res.send(<html><body style="background:#111;color:#0f0;font-family:monospace;padding:20px;text-align:center"><h1>?? GAIH-NEWS</h1><h2 style="color:#ff0">Truth News - No fake! Liberian stories</h2><h3 style="color:#0ff">Port 13024 ONLINE - NEW INVENTION!</h3><p>Output: Liberian news - No BBC</p><p>Location: C:\\inetpub\\wwwroot\\1989SHACK-GAIH\\GAIH-NEWS</p><p>Factory that builds factories!</p><br><a href="http://0.0.0.0:13020" style="color:#0ff;font-size:20px">?? Back to Empire Dashboard</a><br><br><a href="http://0.0.0.0:10001" style="color:#f80">?? Duala Shop</a></body></html>));
-app.get('/api/status',(req,res)=>res.json({wheel:'GAIH-NEWS',port:13024,desc:'Truth News - No fake! Liberian stories',output:'Liberian news - No BBC',status:'ONLINE - NEW INVENTION 2026',empire:'GAIH - Expanding to 37 ports!',location:'Monrovia, Liberia'}));
-app.listen(13024,()=>console.log('GAIH-NEWS ONLINE 13024 - Truth News - No fake! Liberian stories'));

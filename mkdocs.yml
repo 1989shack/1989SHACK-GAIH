@@ -1,7 +1,0 @@
-site_name: 1989SHACK-GAIH
-theme: mkdocs
-nav:
-  - Home: index.md
-  - Systems: systems.md
-  - Origin: origin.md
-  - Deployment: deployment.md
